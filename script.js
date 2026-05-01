@@ -8,7 +8,6 @@ const mediators = [
     { name: "Lounes Chem's", img: "686509516_122161472120640020_7698140914024962050_n.jpg", id: "", phone: "", fb: "#" },
     { name: "Abdel Wahab", img: "669885852_122132688795034284_3950083065487782380_n.jpg", id: "", phone: "", fb: "#" },
     { name: "Benbadra Ahmed Ilyes", img: "682434788_1292941326314113_6149430041564653157_n.jpg", id: "", phone: "", fb: "#" },
-    { name: "Sidhmed", img: "623491934_1210768831180066_7832624202027542150_n.jpg", id: "", phone: "", fb: "#" },
     { name: "Larbi Mohamed", img: "686093056_1678173696524194_2233143532774049149_n.jpg", id: "", phone: "0791521788", fb: "#" }
 ];
 
