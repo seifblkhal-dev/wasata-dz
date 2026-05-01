@@ -1,124 +1,37 @@
-// قائمة الوسطاء المعتمدين - يمكنك إضافة وسيط جديد في نهاية هذه القائمة دائماً
 const mediators = [
-    { 
-        name: "Abdallah Bendal", 
-        img: "487330059_647294354900439_6909264478665023175_n.jpg", 
-        id: "", 
-        phone: "", 
-        fb: "#" 
-    },
-    { 
-        name: "Fahd L-y", 
-        img: "image_2cc343.png", 
-        id: "", 
-        phone: "0556397678", 
-        fb: "#" 
-    },
-    { 
-        name: "Seif Din Blkhal", 
-        img: "645973696_1463265602121726_7545117659013627702_n.jpg", 
-        id: "1232493977", 
-        phone: "", 
-        fb: "#" 
-    },
-    { 
-        name: "Omar Houni", 
-        img: "667807743_1988536058539268_8007520388332275956_n.jpg", 
-        id: "", 
-        phone: "", 
-        fb: "#" 
-    },
-    { 
-        name: "Ahmed Berk", 
-        img: "90ce1764-bb65-4ed8-a418-2d5b9961f2b3.jpg", 
-        id: "", 
-        phone: "0667038305", 
-        fb: "#" 
-    },
-    { 
-        name: "Aissa Ziat", 
-        img: "8baeb0fb-0319-49d6-86bf-ab9544ea5c54.jpg", 
-        id: "", 
-        phone: "0666545521", 
-        fb: "#" 
-    },
-    { 
-        name: "Lounes Chem's", 
-        img: "686509516_122161472120640020_7698140914024962050_n.jpg", 
-        id: "", 
-        phone: "", 
-        fb: "#" 
-    },
-    { 
-        name: "Abdel Wahab", 
-        img: "669885852_122132688795034284_3950083065487782380_n.jpg", 
-        id: "", 
-        phone: "", 
-        fb: "#" 
-    },
-    { 
-        name: "Benbadra Ahmed Ilyes", 
-        img: "682434788_1292941326314113_6149430041564653157_n.jpg", 
-        id: "", 
-        phone: "", 
-        fb: "#" 
-    },
-    { 
-        name: "Sidhmed", 
-        img: "image_22c3d3.jpg", 
-        id: "", 
-        phone: "", 
-        fb: "#" 
-    },
-    // الوسيط الجديد الذي طلبته
-    { 
-        name: "Larbi Mohamed", 
-        img: "image_2261f5.png", 
-        id: "", 
-        phone: "0791521788", 
-        fb: "#" 
-    }
+    { name: "Abdallah Bendal", img: "487330059_647294354900439_6909264478665023175_n.jpg", id: "", phone: "", fb: "#" },
+    { name: "Fahd L-y", img: "image_2cc343.png", id: "", phone: "0556397678", fb: "#" },
+    { name: "Seif Din Blkhal", img: "645973696_1463265602121726_7545117659013627702_n.jpg", id: "1232493977", phone: "", fb: "#" },
+    { name: "Omar Houni", img: "667807743_1988536058539268_8007520388332275956_n.jpg", id: "", phone: "", fb: "#" },
+    { name: "Ahmed Berk", img: "90ce1764-bb65-4ed8-a418-2d5b9961f2b3.jpg", id: "", phone: "0667038305", fb: "#" },
+    { name: "Aissa Ziat", img: "8baeb0fb-0319-49d6-86bf-ab9544ea5c54.jpg", id: "", phone: "0666545521", fb: "#" },
+    { name: "Lounes Chem's", img: "686509516_122161472120640020_7698140914024962050_n.jpg", id: "", phone: "", fb: "#" },
+    { name: "Abdel Wahab", img: "669885852_122132688795034284_3950083065487782380_n.jpg", id: "", phone: "", fb: "#" },
+    { name: "Benbadra Ahmed Ilyes", img: "682434788_1292941326314113_6149430041564653157_n.jpg", id: "", phone: "", fb: "#" },
+    { name: "Sidhmed", img: "623491934_1210768831180066_7832624202027542150_n.jpg", id: "", phone: "", fb: "#" },
+    { name: "Larbi Mohamed", img: "686093056_1678173696524194_2233143532774049149_n.jpg", id: "", phone: "0791521788", fb: "#" }
 ];
 
-// دالة عرض البطاقات - مصممة لتعمل بسرعة وسلاسة
-function renderMediators() {
+function render() {
     const grid = document.getElementById('mediatorGrid');
-    if (!grid) return;
-
+    if(!grid) return;
     grid.innerHTML = mediators.map(m => `
         <div class="card">
-            <div class="image-container">
-                <img src="${m.img}" alt="${m.name}" loading="lazy">
-            </div>
+            <img src="${m.img}" alt="${m.name}" loading="lazy">
             <h3>${m.name}</h3>
-            
-            ${m.phone ? `
-                <p class="info-item">
-                    <i class="fas fa-phone-alt"></i> 
-                    <span>${m.phone}</span>
-                </p>` : ''}
-            
+            ${m.phone ? `<p><i class="fas fa-phone"></i> ${m.phone}</p>` : ''}
             ${m.id ? `
                 <div class="id-box">
                     <span>ID: <strong>${m.id}</strong></span>
-                    <i class="fas fa-copy copy-icon" onclick="copyText('${m.id}')" title="نسخ المعرف"></i>
+                    <i class="fas fa-copy copy-icon" onclick="copyId('${m.id}')"></i>
                 </div>` : ''}
-            
-            <div class="card-actions">
-                <a href="${m.fb}" class="fb-button" target="_blank">
-                    <i class="fab fa-facebook-f"></i> Facebook
-                </a>
-            </div>
+            <a href="${m.fb}" class="fb-link" target="_blank">Facebook</a>
         </div>
     `).join('');
 }
 
-// دالة النسخ مع تنبيه بسيط للمستخدم
-function copyText(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        alert("تم نسخ المعرف: " + text);
-    });
+function copyId(id) {
+    navigator.clipboard.writeText(id).then(() => alert("تم نسخ ID: " + id));
 }
 
-// تشغيل العرض عند تحميل المتصفح بالكامل
-window.addEventListener('DOMContentLoaded', renderMediators);
+window.onload = render;
