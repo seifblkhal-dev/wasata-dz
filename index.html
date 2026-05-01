@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وساطة - قائمة الوسطاء الموثوقين</title>
-    <link rel="stylesheet" href="style.css">
+    <title>وساطة - القائمة الرسمية</title>
+    <!-- روابط خارجية للتنسيق والأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-mode">
-    <nav>
-        <img src="logo.png" alt="وساطة" class="nav-logo">
-        <div class="nav-tools">
-            <button id="themeToggle"><i class="fas fa-moon"></i></button>
+<body>
+    <header>
+        <div class="nav-bar">
+            <img src="logo.png" alt="وساطة" class="mini-logo">
+            <span class="brand-name">WASATA DZ</span>
         </div>
-    </nav>
-
-    <header class="hero">
-        <img src="logo.png" alt="شعار وساطة" class="hero-logo">
-        <h1>نربط الأطراف.. نصنع الحلول</h1>
-        <p>المنصة الرسمية لوسطاء eFootball المعتمدين</p>
+        <div class="hero-section">
+            <img src="logo.png" alt="Logo" class="main-logo">
+            <h1>قائمة الوسطاء المعتمدين</h1>
+            <p>منصة التوثيق الرسمية لضمان أمان تعاملاتكم</p>
+        </div>
     </header>
 
-    <div class="safety-banner">
-        <marquee>تنبيه أمني: تأكد دائماً من مطابقة بيانات Binance ID قبل التحويل. الموقع غير مسؤول عن أي تعامل خارج القائمة.</marquee>
-    </div>
-
-    <main class="grid-container" id="mediatorGrid">
-        <!-- البيانات ستظهر هنا عبر JS -->
+    <main class="container">
+        <div id="mediatorGrid" class="mediator-grid">
+            <!-- سيتم توليد البطاقات هنا تلقائياً -->
+        </div>
     </main>
+
+    <footer>
+        <p>&copy; 2026 جميع الحقوق محفوظة لمنصة وساطة</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
