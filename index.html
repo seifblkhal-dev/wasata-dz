@@ -4,33 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>وساطة - القائمة الرسمية</title>
-    <!-- روابط خارجية للتنسيق والأيقونات -->
+    <!-- استدعاء مكتبة الأيقونات وروابط الخطوط إذا لزم الأمر -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* التنسيقات العامة للموقع */
+        body {
+            background-color: #050a10; /* اللون الداكن للخلفية */
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* تنسيق الهيدر واللوجو */
+        header {
+            padding: 40px 20px;
+        }
+
+        .logo-container img {
+            max-width: 180px; /* التحكم في حجم الشعار لمنعه من التضخم */
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            color: #8b949e;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        /* حاوية الوسطاء - نظام الشبكة (Grid) */
+        .wasata-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 0 40px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* تنسيق بطاقة الوسيط */
+        .card {
+            background: #111d2b;
+            border: 1px solid #1e2f44;
+            border-radius: 15px;
+            padding: 30px 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #58a6ff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .user-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #58a6ff;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .phone {
+            color: #8b949e;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            direction: ltr; /* لعرض رقم الهاتف بشكل صحيح */
+        }
+
+        /* نظام التقييم بالنجوم */
+        .rating-system {
+            margin-bottom: 20px;
+        }
+
+        .star {
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: #21262d;
+            transition: color 0.2s;
+            margin: 0 2px;
+        }
+
+        .star.active {
+            color: #ffca28; /* لون النجوم المفعّلة */
+        }
+
+        /* زر فيسبوك */
+        .fb-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #1877f2;
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .fb-btn i {
+            margin-right: 8px;
+        }
+
+        .fb-btn:hover {
+            background: #166fe5;
+        }
+
+        /* الفوتر */
+        footer {
+            padding: 40px;
+            color: #8b949e;
+            border-top: 1px solid #1e2f44;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <div class="nav-bar">
-            <img src="logo.png" alt="وساطة" class="mini-logo">
-            <span class="brand-name">WASATA DZ</span>
+        <div class="logo-container">
+            <!-- تأكد من وضع مسار الصورة الصحيح هنا -->
+            <img src="https://seifblkhal-dev.github.io/wasata-dz/image_c17ff8.jpg" alt="Wasata Logo">
         </div>
-        <div class="hero-section">
-            <img src="logo.png" alt="Logo" class="main-logo">
-            <h1>قائمة الوسطاء المعتمدين</h1>
-            <p>منصة التوثيق الرسمية لضمان أمان تعاملاتكم</p>
-        </div>
+        <h1>قائمة الوسطاء المعتمدين</h1>
+        <p class="subtitle">منصة التوثيق الرسمية لضمان أمان تعاملاتكم</p>
     </header>
 
-    <main class="container">
-        <div id="mediatorGrid" class="mediator-grid">
-            <!-- سيتم توليد البطاقات هنا تلقائياً -->
-        </div>
+    <!-- هذه الحاوية هي التي سيقوم الـ JavaScript بملئها بالبطاقات -->
+    <main id="wasataContainer" class="wasata-grid">
+        <!-- سيتم توليد المحتوى هنا آلياً -->
     </main>
 
     <footer>
         <p>&copy; 2026 جميع الحقوق محفوظة لمنصة وساطة</p>
     </footer>
 
+    <!-- استدعاء ملف السكريبت -->
     <script src="script.js"></script>
 </body>
 </html>
