@@ -8,16 +8,17 @@
         body { background-color: #050a10; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
         header { padding: 20px; background: #0b141f; margin-bottom: 20px; border-bottom: 1px solid #1e2f44; }
         .lang-switcher { margin-bottom: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-        .lang-btn { background: #1e2f44; color: white; border: 1px solid #58a6ff; padding: 5px 15px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; }
-        .wasata-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+        .lang-btn { background: #1e2f44; color: white; border: 1px solid #58a6ff; padding: 5px 15px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; border: none; }
+        .wasata-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; }
         .card { background: #111d2b; border: 1px solid #1e2f44; border-radius: 12px; width: 250px; padding: 25px 15px; transition: transform 0.3s; }
         .card:hover { transform: translateY(-5px); border-color: #58a6ff; }
         .user-img { width: 100px; height: 100px; border-radius: 50%; border: 2px solid #58a6ff; object-fit: cover; margin-bottom: 15px; background: #0b141f; }
         .name { font-size: 1.1rem; margin: 10px 0; font-weight: bold; }
         .info { color: #8b949e; font-size: 0.85rem; min-height: 1.2rem; margin-bottom: 5px; direction: ltr; }
-        .binance-id { color: #58a6ff; font-weight: bold; font-size: 0.85rem; margin-bottom: 10px; display: block; }
+        .binance-id { color: #58a6ff; font-weight: bold; font-size: 0.85rem; margin-bottom: 10px; display: block; direction: ltr; }
         .stars { color: #ffca28; margin-bottom: 15px; }
         .fb-btn { display: inline-block; background: #1877f2; color: white; text-decoration: none; padding: 10px 30px; border-radius: 25px; font-weight: bold; }
+        .fb-btn:hover { background: #145dbf; }
     </style>
 </head>
 <body>
@@ -26,17 +27,16 @@
     <div class="lang-switcher">
         <button class="lang-btn" onclick="changeLang('ar')">العربية</button>
         <button class="lang-btn" onclick="changeLang('en')">English</button>
-        <button class="lang-btn" onclick="changeLang('fr')">Français</button>
     </div>
     <h1 id="title">قائمة الوسطاء المعتمدين</h1>
-    <p id="subtitle" style="color: #8b949e;">منصة التوثيق الرسمية لضمان أمان تعاملاتكم</p>
+    <p id="subtitle" style="color: #8b949e;">منصة التوثيق الرسمية لضمان أمان تعاملاتكم في الجزائر</p>
 </header>
 
 <div class="wasata-grid">
 
     <!-- 1. Anis El Jijli -->
     <div class="card">
-        <img src="606014932_122202225950288501_5304982109923949077_n.jpg" class="user-img">
+        <img src="anis.png" class="user-img" onerror="this.src='https://via.placeholder.com/100?text=No+Image'">
         <div class="name">Anis El Jijli</div>
         <div class="info">0797310724</div>
         <span class="binance-id">Binance ID: 1162920080</span>
@@ -46,7 +46,7 @@
 
     <!-- 2. Wail Ben Ghochie -->
     <div class="card">
-        <img src="1c14f5b7-9147-4c00-bbf8-bf46ab158b4d.jpg" class="user-img">
+        <img src="wail.png" class="user-img" onerror="this.src='https://via.placeholder.com/100?text=No+Image'">
         <div class="name">Wail Ben Ghochie</div>
         <span class="binance-id">Binance ID: 1129058291</span>
         <div class="stars">★★★★★</div>
@@ -55,7 +55,7 @@
 
     <!-- 3. Milaño Said -->
     <div class="card">
-        <img src="d734f4ca-9687-4b93-940a-baf20d4f5061.jpg" class="user-img">
+        <img src="milano.png" class="user-img" onerror="this.src='https://via.placeholder.com/100?text=No+Image'">
         <div class="name">Milaño Said</div>
         <span class="binance-id">Binance ID: 1103427173</span>
         <div class="stars">★★★★★</div>
@@ -64,7 +64,7 @@
 
     <!-- 4. Yacine Abdou -->
     <div class="card">
-        <img src="682485936_1684587965875314_4347891438041489026_n.jpg" class="user-img">
+        <img src="yacine.png" class="user-img" onerror="this.src='https://via.placeholder.com/100?text=No+Image'">
         <div class="name">Yacine Abdou</div>
         <div class="info">0772024051</div>
         <span class="binance-id">Binance ID: 1006839245</span>
@@ -72,22 +72,22 @@
         <a href="https://www.facebook.com/yacine.abdou.953122" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 5. Ahmed Berk -->
-    <div class="card">
-        <img src="berk.png" class="user-img">
-        <div class="name">Ahmed Berk</div>
-        <div class="info">0667038305</div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/ahmed.berk.7" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
-    <!-- 6. Seif Din Blkhal -->
+    <!-- 5. Seif Din Blkhal -->
     <div class="card">
         <img src="seif.png" class="user-img">
         <div class="name">Seif Din Blkhal</div>
         <span class="binance-id">Binance ID: 1232493977</span>
         <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/seif.blkhal" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
+    <!-- 6. Ahmed Berk -->
+    <div class="card">
+        <img src="berk.png" class="user-img">
+        <div class="name">Ahmed Berk</div>
+        <div class="info">0667038305</div>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/ahmed.berk.7" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
     <!-- 7. Fahd L-y -->
@@ -162,9 +162,8 @@
 <script>
     function changeLang(lang) {
         const translations = {
-            ar: { title: "قائمة الوسطاء المعتمدين", subtitle: "منصة التوثيق الرسمية لضمان أمان تعاملاتكم" },
-            en: { title: "Certified Intermediaries List", subtitle: "Official documentation platform to ensure your transactions" },
-            fr: { title: "Liste des Intermédiaires Certifiés", subtitle: "Plateforme officielle pour sécuriser vos transactions" }
+            ar: { title: "قائمة الوسطاء المعتمدين", subtitle: "منصة التوثيق الرسمية لضمان أمان تعاملاتكم في الجزائر" },
+            en: { title: "Certified Intermediaries List", subtitle: "Official documentation platform to ensure your transactions in Algeria" }
         };
         document.getElementById('title').innerText = translations[lang].title;
         document.getElementById('subtitle').innerText = translations[lang].subtitle;
