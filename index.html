@@ -8,15 +8,14 @@
         body {
             background-color: #050a10;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
         }
 
-        header { padding: 30px; }
+        header { padding: 40px 20px; }
 
-        /* إصلاح حجم اللوجو */
         .logo-container img {
             width: 150px;
             height: auto;
@@ -28,38 +27,44 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            padding: 20px;
+            padding: 20px 40px;
         }
 
         .card {
             background: #111d2b;
             border: 1px solid #1e2f44;
-            border-radius: 12px;
+            border-radius: 15px;
             width: 260px;
-            padding: 20px;
+            padding: 25px 15px;
             text-align: center;
+            transition: 0.3s;
         }
 
+        .card:hover { border-color: #58a6ff; transform: translateY(-5px); }
+
         .user-img {
-            width: 90px;
-            height: 90px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             border: 2px solid #58a6ff;
             object-fit: cover;
+            margin-bottom: 15px;
         }
 
-        .name { font-size: 1.1rem; margin: 10px 0; }
-        .phone { color: #8b949e; font-size: 0.9rem; margin-bottom: 15px; }
+        .name { font-size: 1.2rem; font-weight: bold; margin: 10px 0; }
+        .info-text { color: #8b949e; font-size: 0.9rem; margin-bottom: 15px; min-height: 1.2rem; }
 
-        /* زر فيسبوك المصلح */
+        .stars { color: #ffca28; margin-bottom: 20px; font-size: 1.2rem; }
+
         .fb-btn {
             display: inline-block;
             background: #1877f2;
             color: white;
             text-decoration: none;
-            padding: 8px 25px;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -67,95 +72,106 @@
 
 <header>
     <div class="logo-container">
+        <!-- تأكد من أن اسم ملف اللوجو صحيح -->
         <img src="image_c17ff8.jpg" alt="Logo">
     </div>
     <h1>قائمة الوسطاء المعتمدين</h1>
-    <p>منصة التوثيق الرسمية لضمان أمان تعاملاتكم</p>
+    <p style="color: #8b949e;">منصة التوثيق الرسمية لضمان أمان تعاملاتكم</p>
 </header>
 
 <div class="wasata-grid">
-    <!-- 1. Abdallah Bendal -->
+    <!-- 1. Abdallah Bendal (بدون هاتف) -->
     <div class="card">
-        <img src="images/abdallah.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/abdallah.jpg" class="user-img">
         <div class="name">Abdallah Bendal</div>
-        <div class="phone">0550000000</div>
+        <div class="info-text"></div> 
+        <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/abdallah.dz.104" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
     <!-- 2. Fahd L-y -->
     <div class="card">
-        <img src="images/fahd.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/fahd.jpg" class="user-img">
         <div class="name">Fahd L-y</div>
-        <div class="phone">0556397678</div>
+        <div class="info-text">0556397678</div>
+        <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/profile.php?id=61556093836113" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
     <!-- 3. Seif Din Blkhal -->
     <div class="card">
-        <img src="images/seif.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/seif.jpg" class="user-img">
         <div class="name">Seif Din Blkhal</div>
-        <div class="phone">ID: 1232493977</div>
+        <div class="info-text">ID: 1232493977</div>
+        <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/seif.blkhal" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 4. Omar Houni -->
+    <!-- 4. Omar Houni (بدون هاتف) -->
     <div class="card">
-        <img src="images/omar.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/omar.jpg" class="user-img">
         <div class="name">Omar Houni</div>
-        <div class="phone">0660000000</div>
+        <div class="info-text"></div>
+        <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/omar.houni.1" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
     <!-- 5. Ahmed Berk -->
     <div class="card">
-        <img src="images/ahmed.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/ahmed.jpg" class="user-img">
         <div class="name">Ahmed Berk</div>
-        <div class="phone">0667038305</div>
+        <div class="info-text">0667038305</div>
+        <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/ahmed.berk.7" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
     <!-- 6. Aissa Ziat -->
     <div class="card">
-        <img src="images/aissa.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/aissa.jpg" class="user-img">
         <div class="name">Aissa Ziat</div>
-        <div class="phone">0666545521</div>
+        <div class="info-text">0666545521</div>
+        <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/aissa.ziat" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
     <!-- 7. Lounes Chem's -->
     <div class="card">
-        <img src="images/lounes.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/lounes.jpg" class="user-img">
         <div class="name">Lounes Chem's</div>
-        <div class="phone">0770000000</div>
+        <div class="info-text">0770000000</div>
+        <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/lounes.chems" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 8. Abdel Wahab -->
+    <!-- 8. Abdel Wahab (بدون هاتف) -->
     <div class="card">
-        <img src="images/wahab.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/wahab.jpg" class="user-img">
         <div class="name">Abdel Wahab</div>
-        <div class="phone">0550000000</div>
+        <div class="info-text"></div>
+        <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/abdel.wahab.dz" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
     <!-- 9. Benbadra Ahmed Ilyes -->
     <div class="card">
-        <img src="images/ilyes.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/ilyes.jpg" class="user-img">
         <div class="name">Benbadra Ahmed Ilyes</div>
-        <div class="phone">0660000000</div>
+        <div class="info-text">0660000000</div>
+        <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/ilyes.benbadra" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
     <!-- 10. Larbi Mohamed -->
     <div class="card">
-        <img src="images/larbi.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/larbi.jpg" class="user-img">
         <div class="name">Larbi Mohamed</div>
-        <div class="phone">0791521788</div>
+        <div class="info-text">0791521788</div>
+        <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/larbi.mohamed.984" target="_blank" class="fb-btn">Facebook</a>
     </div>
 </div>
 
-<footer>
+<footer style="padding: 40px; color: #8b949e;">
     <p>&copy; 2026 جميع الحقوق محفوظة لمنصة وساطة</p>
 </footer>
 
