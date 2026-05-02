@@ -7,8 +7,6 @@
     <style>
         body { background-color: #050a10; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
         header { padding: 20px; background: #0b141f; margin-bottom: 20px; border-bottom: 1px solid #1e2f44; }
-        .lang-switcher { margin-bottom: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-        .lang-btn { background: #1e2f44; color: white; border: 1px solid #58a6ff; padding: 5px 15px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; border: none; }
         .wasata-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; }
         .card { background: #111d2b; border: 1px solid #1e2f44; border-radius: 12px; width: 250px; padding: 25px 15px; transition: transform 0.3s; }
         .card:hover { transform: translateY(-5px); border-color: #58a6ff; }
@@ -24,19 +22,15 @@
 <body>
 
 <header>
-    <div class="lang-switcher">
-        <button class="lang-btn" onclick="changeLang('ar')">العربية</button>
-        <button class="lang-btn" onclick="changeLang('en')">English</button>
-    </div>
-    <h1 id="title">قائمة الوسطاء المعتمدين</h1>
-    <p id="subtitle" style="color: #8b949e;">منصة التوثيق الرسمية لضمان أمان تعاملاتكم في الجزائر</p>
+    <h1>قائمة الوسطاء المعتمدين</h1>
+    <p style="color: #8b949e;">منصة التوثيق الرسمية لضمان أمان تعاملاتكم في الجزائر</p>
 </header>
 
 <div class="wasata-grid">
 
-    <!-- 1. Anis El Jijli -->
+    <!-- الوسطاء الأربعة الجدد -->
     <div class="card">
-        <img src="anis.png" class="user-img" onerror="this.src='https://via.placeholder.com/100?text=No+Image'">
+        <img src="anis.png" class="user-img">
         <div class="name">Anis El Jijli</div>
         <div class="info">0797310724</div>
         <span class="binance-id">Binance ID: 1162920080</span>
@@ -44,27 +38,24 @@
         <a href="https://www.facebook.com/Anisjijli18" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 2. Wail Ben Ghochie -->
     <div class="card">
-        <img src="wail.png" class="user-img" onerror="this.src='https://via.placeholder.com/100?text=No+Image'">
+        <img src="wail.png" class="user-img">
         <div class="name">Wail Ben Ghochie</div>
         <span class="binance-id">Binance ID: 1129058291</span>
         <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/wayl.bn.ghwshy.2025" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 3. Milaño Said -->
     <div class="card">
-        <img src="milano.png" class="user-img" onerror="this.src='https://via.placeholder.com/100?text=No+Image'">
+        <img src="milano.png" class="user-img">
         <div class="name">Milaño Said</div>
         <span class="binance-id">Binance ID: 1103427173</span>
         <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/omar.2elbachir12" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 4. Yacine Abdou -->
     <div class="card">
-        <img src="yacine.png" class="user-img" onerror="this.src='https://via.placeholder.com/100?text=No+Image'">
+        <img src="yacine.png" class="user-img">
         <div class="name">Yacine Abdou</div>
         <div class="info">0772024051</div>
         <span class="binance-id">Binance ID: 1006839245</span>
@@ -72,7 +63,75 @@
         <a href="https://www.facebook.com/yacine.abdou.953122" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 5. Seif Din Blkhal -->
+    <!-- الوسطاء المحدثة روابطهم -->
+    <div class="card">
+        <img src="abdallah.png" class="user-img">
+        <div class="name">Abdallah Bendal</div>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/abdallahbendal" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
+    <div class="card">
+        <img src="fahd.png" class="user-img">
+        <div class="name">Fahd L-y</div>
+        <div class="info">0556397678</div>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/fahd.l.y.443450" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
+    <div class="card">
+        <img src="lounes.png" class="user-img">
+        <div class="name">Lounes Chem's</div>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/lounes.chems.9" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
+    <div class="card">
+        <img src="aissa.png" class="user-img">
+        <div class="name">Aissa Ziat</div>
+        <div class="info">0666545521</div>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/aissa.ziat.694743" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
+    <div class="card">
+        <img src="wahab.png" class="user-img">
+        <div class="name">Abdel Wahab</div>
+        <span class="binance-id">Binance ID: 1056637986</span>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/WahbyF12" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
+    <div class="card">
+        <img src="omar.png" class="user-img">
+        <div class="name">Omar Houni</div>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/omar.houni.5" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
+    <div class="card">
+        <img src="larbi.png" class="user-img">
+        <div class="name">Larbi Mohamed</div>
+        <div class="info">0791521788</div>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/lw.mohamed.2025" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
+    <div class="card">
+        <img src="berk.png" class="user-img">
+        <div class="name">Ahmed Berk</div>
+        <div class="info">0667038305</div>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/profile.php?id=61576917104507" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
+    <div class="card">
+        <img src="badra.png" class="user-img">
+        <div class="name">Benbadra Ahmed Ilyes</div>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/Saidi.il5" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
     <div class="card">
         <img src="seif.png" class="user-img">
         <div class="name">Seif Din Blkhal</div>
@@ -81,95 +140,7 @@
         <a href="https://www.facebook.com/seif.blkhal" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 6. Ahmed Berk -->
-    <div class="card">
-        <img src="berk.png" class="user-img">
-        <div class="name">Ahmed Berk</div>
-        <div class="info">0667038305</div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/ahmed.berk.7" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
-    <!-- 7. Fahd L-y -->
-    <div class="card">
-        <img src="fahd.png" class="user-img">
-        <div class="name">Fahd L-y</div>
-        <div class="info">0556397678</div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/profile.php?id=61556093836113" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
-    <!-- 8. Omar Houni -->
-    <div class="card">
-        <img src="omar.png" class="user-img">
-        <div class="name">Omar Houni</div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/omar.houni.1" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
-    <!-- 9. Abdallah Bendal -->
-    <div class="card">
-        <img src="abdallah.png" class="user-img">
-        <div class="name">Abdallah Bendal</div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/abdallah.dz.104" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
-    <!-- 10. Larbi Mohamed -->
-    <div class="card">
-        <img src="larbi.png" class="user-img">
-        <div class="name">Larbi Mohamed</div>
-        <div class="info">0791521788</div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/larbi.mohamed.984" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
-    <!-- 11. Benbadra Ahmed Ilyes -->
-    <div class="card">
-        <img src="badra.png" class="user-img">
-        <div class="name">Benbadra Ahmed Ilyes</div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/ilyes.benbadra" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
-    <!-- 12. Abdel Wahab -->
-    <div class="card">
-        <img src="wahab.png" class="user-img">
-        <div class="name">Abdel Wahab</div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/abdel.wahab.dz" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
-    <!-- 13. Lounes Chem's -->
-    <div class="card">
-        <img src="lounes.png" class="user-img">
-        <div class="name">Lounes Chem's</div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/lounes.chems" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
-    <!-- 14. Aissa Ziat -->
-    <div class="card">
-        <img src="aissa.png" class="user-img">
-        <div class="name">Aissa Ziat</div>
-        <div class="info">0666545521</div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/aissa.ziat" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
 </div>
-
-<script>
-    function changeLang(lang) {
-        const translations = {
-            ar: { title: "قائمة الوسطاء المعتمدين", subtitle: "منصة التوثيق الرسمية لضمان أمان تعاملاتكم في الجزائر" },
-            en: { title: "Certified Intermediaries List", subtitle: "Official documentation platform to ensure your transactions in Algeria" }
-        };
-        document.getElementById('title').innerText = translations[lang].title;
-        document.getElementById('subtitle').innerText = translations[lang].subtitle;
-        document.getElementById('mainHtml').setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-    }
-</script>
 
 </body>
 </html>
