@@ -1,41 +1,47 @@
-.wasata-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
+/* تنسيق اللوجو - لمنعه من التضخم */
+.logo-container img {
+    max-width: 150px; /* أو الحجم الذي تراه مناسباً */
+    height: auto;
+    margin-bottom: 20px;
 }
 
+/* تنسيق الحاوية الرئيسية */
+.wasata-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* تنسيق البطاقة ليطابق تصميمك الأصلي */
 .card {
-    background: #0d1117;
-    border: 1px solid #30363d;
-    border-radius: 15px;
-    width: 250px;
+    background: #111d2b; 
+    border: 1px solid #1e2f44;
+    border-radius: 12px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 280px;
 }
 
 .user-img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 2px solid #58a6ff;
     object-fit: cover;
+    border: 2px solid #58a6ff;
 }
 
-.name { color: white; margin: 15px 0 5px; }
-.phone { color: #8b949e; font-size: 0.9rem; margin-bottom: 10px; }
+.star { font-size: 1.2rem; cursor: pointer; color: #333; }
+.star.active { color: #ffca28; }
 
 .fb-btn {
-    display: block;
+    display: inline-block;
     background: #1877f2;
     color: white;
     text-decoration: none;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 15px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
 }
-
-.star { cursor: pointer; color: #333; font-size: 1.2rem; }
-.star.active { color: #ffca28; }
