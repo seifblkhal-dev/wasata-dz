@@ -1,50 +1,58 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" id="mainHtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وساطة - القائمة الرسمية</title>
+    <title>Wasata DZ</title>
     <style>
-        body { background-color: #050a10; color: white; font-family: sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
-        header { padding: 30px; }
-        .logo-container img { width: 150px; height: auto; margin-bottom: 10px; }
+        body { background-color: #050a10; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding-bottom: 50px; transition: 0.3s; }
+        header { padding: 20px; background: #0b141f; margin-bottom: 20px; }
+        .lang-switcher { margin-bottom: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        .lang-btn { background: #1e2f44; color: white; border: 1px solid #58a6ff; padding: 5px 15px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; }
+        .lang-btn:hover { background: #58a6ff; }
         .wasata-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
-        .card { background: #111d2b; border: 1px solid #1e2f44; border-radius: 12px; width: 250px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-        .user-img { width: 100px; height: 100px; border-radius: 50%; border: 2px solid #58a6ff; object-fit: cover; display: block; margin: 0 auto 15px; background: #1c2d3d; }
+        .card { background: #111d2b; border: 1px solid #1e2f44; border-radius: 12px; width: 250px; padding: 25px 15px; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .user-img { width: 100px; height: 100px; border-radius: 50%; border: 2px solid #58a6ff; object-fit: cover; margin-bottom: 15px; }
         .name { font-size: 1.1rem; margin: 10px 0; font-weight: bold; }
-        .info { color: #8b949e; font-size: 0.9rem; min-height: 1.2rem; margin-bottom: 10px; }
+        .info { color: #8b949e; font-size: 0.9rem; min-height: 1.2rem; margin-bottom: 10px; direction: ltr; }
         .stars { color: #ffca28; margin-bottom: 15px; }
-        .fb-btn { display: inline-block; background: #1877f2; color: white; text-decoration: none; padding: 10px 30px; border-radius: 25px; font-size: 0.9rem; font-weight: bold; transition: 0.3s; }
-        .fb-btn:hover { background: #145dbf; }
+        .fb-btn { display: inline-block; background: #1877f2; color: white; text-decoration: none; padding: 10px 30px; border-radius: 25px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-container">
-        <!-- تم تعديل مسار اللوجو -->
-        <img src="logo.png" alt="وساطة">
+    <div class="lang-switcher">
+        <button class="lang-btn" onclick="changeLang('ar')">العربية</button>
+        <button class="lang-btn" onclick="changeLang('en')">English</button>
+        <button class="lang-btn" onclick="changeLang('fr')">Français</button>
+        <button class="lang-btn" onclick="changeLang('es')">Español</button>
+        <button class="lang-btn" onclick="changeLang('fa')">فارسی</button>
     </div>
-    <h1>قائمة الوسطاء المعتمدين</h1>
+    <h1 id="title">قائمة الوسطاء المعتمدين</h1>
+    <p id="subtitle" style="color: #8b949e;">منصة التوثيق الرسمية لضمان أمان تعاملاتكم</p>
 </header>
 
 <div class="wasata-grid">
-    <!-- 1. Abdallah Bendal (بدون هاتف) -->
+    <!-- تم ترتيبهم بناءً على ملفات الـ GitHub الخاصة بك -->
+    
+    <!-- 1. Ahmed Berk -->
     <div class="card">
-        <img src="abdallah.png" class="user-img">
-        <div class="name">Abdallah Bendal</div>
-        <div class="info"></div>
+        <img src="berk.png" class="user-img" onerror="this.src='https://via.placeholder.com/100'">
+        <div class="name">Ahmed Berk</div>
+        <div class="info">0667038305</div>
         <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/abdallah.dz.104" target="_blank" class="fb-btn">Facebook</a>
+        <a href="https://www.facebook.com/ahmed.berk.7" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 2. Fahd L-y -->
+    <!-- 2. Omar Houni -->
     <div class="card">
-        <img src="fahd.png" class="user-img">
-        <div class="name">Fahd L-y</div>
-        <div class="info">0556397678</div>
+        <img src="omar.png" class="user-img">
+        <div class="name">Omar Houni</div>
+        <div class="info"></div>
         <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/profile.php?id=61556093836113" target="_blank" class="fb-btn">Facebook</a>
+        <a href="https://www.facebook.com/omar.houni.1" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
     <!-- 3. Seif Din Blkhal -->
@@ -56,52 +64,34 @@
         <a href="https://www.facebook.com/seif.blkhal" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 4. Omar Houni (بدون هاتف) -->
+    <!-- 4. Fahd L-y -->
     <div class="card">
-        <img src="omar.png" class="user-img">
-        <div class="name">Omar Houni</div>
+        <img src="fahd.png" class="user-img">
+        <div class="name">Fahd L-y</div>
+        <div class="info">0556397678</div>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/profile.php?id=61556093836113" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
+    <!-- 5. Abdallah Bendal -->
+    <div class="card">
+        <img src="abdallah.png" class="user-img">
+        <div class="name">Abdallah Bendal</div>
         <div class="info"></div>
         <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/omar.houni.1" target="_blank" class="fb-btn">Facebook</a>
+        <a href="https://www.facebook.com/abdallah.dz.104" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 5. Ahmed Berk -->
+    <!-- 6. Larbi Mohamed -->
     <div class="card">
-        <img src="berk.png" class="user-img">
-        <div class="name">Ahmed Berk</div>
-        <div class="info">0667038305</div>
+        <img src="larbi.png" class="user-img">
+        <div class="name">Larbi Mohamed</div>
+        <div class="info">0791521788</div>
         <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/ahmed.berk.7" target="_blank" class="fb-btn">Facebook</a>
+        <a href="https://www.facebook.com/larbi.mohamed.984" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 6. Aissa Ziat -->
-    <div class="card">
-        <img src="aissa.png" class="user-img">
-        <div class="name">Aissa Ziat</div>
-        <div class="info">0666545521</div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/aissa.ziat" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
-    <!-- 7. Lounes Chem's (نزعت الرقم) -->
-    <div class="card">
-        <img src="lounes.png" class="user-img">
-        <div class="name">Lounes Chem's</div>
-        <div class="info"></div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/lounes.chems" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
-    <!-- 8. Abdel Wahab (بدون هاتف) -->
-    <div class="card">
-        <img src="wahab.png" class="user-img">
-        <div class="name">Abdel Wahab</div>
-        <div class="info"></div>
-        <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/abdel.wahab.dz" target="_blank" class="fb-btn">Facebook</a>
-    </div>
-
-    <!-- 9. Benbadra Ahmed Ilyes (نزعت الرقم) -->
+    <!-- 7. Benbadra Ahmed Ilyes -->
     <div class="card">
         <img src="badra.png" class="user-img">
         <div class="name">Benbadra Ahmed Ilyes</div>
@@ -110,19 +100,50 @@
         <a href="https://www.facebook.com/ilyes.benbadra" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 10. Larbi Mohamed -->
+    <!-- 8. Abdel Wahab -->
     <div class="card">
-        <img src="larbi.png" class="user-img">
-        <div class="name">Larbi Mohamed</div>
-        <div class="info">0791521788</div>
+        <img src="wahab.png" class="user-img">
+        <div class="name">Abdel Wahab</div>
+        <div class="info"></div>
         <div class="stars">★★★★★</div>
-        <a href="https://www.facebook.com/larbi.mohamed.984" target="_blank" class="fb-btn">Facebook</a>
+        <a href="https://www.facebook.com/abdel.wahab.dz" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
+    <!-- 9. Lounes Chem's -->
+    <div class="card">
+        <img src="lounes.png" class="user-img">
+        <div class="name">Lounes Chem's</div>
+        <div class="info"></div>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/lounes.chems" target="_blank" class="fb-btn">Facebook</a>
+    </div>
+
+    <!-- 10. Aissa Ziat -->
+    <div class="card">
+        <img src="aissa.png" class="user-img">
+        <div class="name">Aissa Ziat</div>
+        <div class="info">0666545521</div>
+        <div class="stars">★★★★★</div>
+        <a href="https://www.facebook.com/aissa.ziat" target="_blank" class="fb-btn">Facebook</a>
     </div>
 </div>
 
-<footer style="margin-top: 30px; color: #8b949e; font-size: 0.8rem;">
-    <p>&copy; 2026 جميع الحقوق محفوظة لمنصة وساطة</p>
-</footer>
+<script>
+    const translations = {
+        ar: { title: "قائمة الوسطاء المعتمدين", subtitle: "منصة التوثيق الرسمية لضمان أمان تعاملاتكم", dir: "rtl" },
+        en: { title: "Certified Intermediaries List", subtitle: "Official documentation platform to ensure your transactions", dir: "ltr" },
+        fr: { title: "Liste des Intermédiaires Certifiés", subtitle: "Plateforme officielle pour sécuriser vos transactions", dir: "ltr" },
+        es: { title: "Lista de Intermediarios Certificados", subtitle: "Plataforma oficial para asegurar sus transacciones", dir: "ltr" },
+        fa: { title: "لیست واسطه های معتبر", subtitle: "پلتفرم رسمی مستندسازی برای اطمینان از معاملات شما", dir: "rtl" }
+    };
+
+    function changeLang(lang) {
+        document.getElementById('title').innerText = translations[lang].title;
+        document.getElementById('subtitle').innerText = translations[lang].subtitle;
+        document.getElementById('mainHtml').setAttribute('dir', translations[lang].dir);
+        document.getElementById('mainHtml').setAttribute('lang', lang);
+    }
+</script>
 
 </body>
 </html>
