@@ -10,26 +10,29 @@
         .logo-container img { width: 150px; height: auto; }
         .wasata-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
         .card { background: #111d2b; border: 1px solid #1e2f44; border-radius: 12px; width: 250px; padding: 20px; }
-        .user-img { width: 90px; height: 90px; border-radius: 50%; border: 2px solid #58a6ff; object-fit: cover; }
+        /* تم إصلاح إعدادات الصورة لتظهر بشكل صحيح */
+        .user-img { width: 100px; height: 100px; border-radius: 50%; border: 2px solid #58a6ff; object-fit: cover; display: block; margin: 0 auto 15px; background: #1c2d3d; }
         .name { font-size: 1.1rem; margin: 10px 0; font-weight: bold; }
         .info { color: #8b949e; font-size: 0.9rem; min-height: 1.2rem; margin-bottom: 10px; }
         .stars { color: #ffca28; margin-bottom: 15px; }
-        .fb-btn { display: inline-block; background: #1877f2; color: white; text-decoration: none; padding: 8px 25px; border-radius: 20px; font-size: 0.85rem; }
+        .fb-btn { display: inline-block; background: #1877f2; color: white; text-decoration: none; padding: 8px 25px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo-container">
+        <!-- رابط اللوجو الخاص بك -->
         <img src="https://seifblkhal-dev.github.io/wasata-dz/image_c17ff8.jpg" alt="Logo">
     </div>
     <h1>قائمة الوسطاء المعتمدين</h1>
+    <p style="color: #8b949e; font-size: 0.9rem;">منصة التوثيق الرسمية لضمان أمان تعاملاتكم</p>
 </header>
 
 <div class="wasata-grid">
-    <!-- 1. Abdallah Bendal -->
+    <!-- 1. Abdallah Bendal (بدون رقم) -->
     <div class="card">
-        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/abdallah.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/abdallah.jpg" class="user-img" onerror="this.src='https://via.placeholder.com/100'">
         <div class="name">Abdallah Bendal</div>
         <div class="info"></div>
         <div class="stars">★★★★★</div>
@@ -38,7 +41,7 @@
 
     <!-- 2. Fahd L-y -->
     <div class="card">
-        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/fahd.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/fahd.jpg" class="user-img" onerror="this.src='https://via.placeholder.com/100'">
         <div class="name">Fahd L-y</div>
         <div class="info">0556397678</div>
         <div class="stars">★★★★★</div>
@@ -47,16 +50,16 @@
 
     <!-- 3. Seif Din Blkhal -->
     <div class="card">
-        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/seif.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/seif.jpg" class="user-img" onerror="this.src='https://via.placeholder.com/100'">
         <div class="name">Seif Din Blkhal</div>
         <div class="info">ID: 1232493977</div>
         <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/seif.blkhal" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 4. Omar Houni -->
+    <!-- 4. Omar Houni (بدون رقم) -->
     <div class="card">
-        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/omar.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/omar.jpg" class="user-img" onerror="this.src='https://via.placeholder.com/100'">
         <div class="name">Omar Houni</div>
         <div class="info"></div>
         <div class="stars">★★★★★</div>
@@ -65,7 +68,7 @@
 
     <!-- 5. Ahmed Berk -->
     <div class="card">
-        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/ahmed.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/ahmed.jpg" class="user-img" onerror="this.src='https://via.placeholder.com/100'">
         <div class="name">Ahmed Berk</div>
         <div class="info">0667038305</div>
         <div class="stars">★★★★★</div>
@@ -74,34 +77,34 @@
 
     <!-- 6. Aissa Ziat -->
     <div class="card">
-        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/aissa.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/aissa.jpg" class="user-img" onerror="this.src='https://via.placeholder.com/100'">
         <div class="name">Aissa Ziat</div>
         <div class="info">0666545521</div>
         <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/aissa.ziat" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 7. Lounes Chem's (تم نزع الرقم) -->
+    <!-- 7. Lounes Chem's (نزعت الرقم) -->
     <div class="card">
-        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/lounes.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/lounes.jpg" class="user-img" onerror="this.src='https://via.placeholder.com/100'">
         <div class="name">Lounes Chem's</div>
         <div class="info"></div>
         <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/lounes.chems" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 8. Abdel Wahab -->
+    <!-- 8. Abdel Wahab (بدون رقم) -->
     <div class="card">
-        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/wahab.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/wahab.jpg" class="user-img" onerror="this.src='https://via.placeholder.com/100'">
         <div class="name">Abdel Wahab</div>
         <div class="info"></div>
         <div class="stars">★★★★★</div>
         <a href="https://www.facebook.com/abdel.wahab.dz" target="_blank" class="fb-btn">Facebook</a>
     </div>
 
-    <!-- 9. Benbadra Ahmed Ilyes (تم نزع الرقم) -->
+    <!-- 9. Benbadra Ahmed Ilyes (نزعت الرقم) -->
     <div class="card">
-        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/ilyes.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/ilyes.jpg" class="user-img" onerror="this.src='https://via.placeholder.com/100'">
         <div class="name">Benbadra Ahmed Ilyes</div>
         <div class="info"></div>
         <div class="stars">★★★★★</div>
@@ -110,7 +113,7 @@
 
     <!-- 10. Larbi Mohamed -->
     <div class="card">
-        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/larbi.jpg" class="user-img">
+        <img src="https://seifblkhal-dev.github.io/wasata-dz/images/larbi.jpg" class="user-img" onerror="this.src='https://via.placeholder.com/100'">
         <div class="name">Larbi Mohamed</div>
         <div class="info">0791521788</div>
         <div class="stars">★★★★★</div>
