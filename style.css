@@ -1,55 +1,41 @@
-/* تنسيق الحاوية لتكون شبكة مثل الصورة */
 .wasata-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-/* تنسيق البطاقة */
 .card {
-    background: #111d2b; /* لون أزرق داكن قريب من الصورة */
-    border: 1px solid #1e2f44;
-    border-radius: 12px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 15px;
+    width: 250px;
     padding: 20px;
     text-align: center;
-    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.card:hover {
-    border-color: #58a6ff;
+.user-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #58a6ff;
+    object-fit: cover;
 }
 
-.name {
-    color: white;
-    font-size: 1.1rem;
-    margin: 10px 0;
-}
+.name { color: white; margin: 15px 0 5px; }
+.phone { color: #8b949e; font-size: 0.9rem; margin-bottom: 10px; }
 
-.phone {
-    color: #8b949e;
-    font-size: 0.9rem;
-}
-
-/* زر فيسبوك ليطابق الصورة */
-.fb-button {
+.fb-btn {
+    display: block;
     background: #1877f2;
     color: white;
     text-decoration: none;
-    padding: 8px 20px;
-    border-radius: 20px;
-    display: inline-block;
+    padding: 10px;
+    border-radius: 8px;
     margin-top: 15px;
-    font-size: 0.85rem;
 }
 
-/* التقييم بالنجوم */
-.star {
-    cursor: pointer;
-    color: #30363d;
-    font-size: 1.2rem;
-}
-
-.star.active {
-    color: #ffca28; /* لون ذهبي للنجوم المفعّلة */
-}
+.star { cursor: pointer; color: #333; font-size: 1.2rem; }
+.star.active { color: #ffca28; }
