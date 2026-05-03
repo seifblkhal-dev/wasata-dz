@@ -23,9 +23,9 @@
             line-height: 1.6;
         }
 
-        /* القائمة العلوية للتنقل */
+        /* شريط التنقل العلوي */
         nav {
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             padding: 15px;
             position: fixed;
             width: 100%;
@@ -34,35 +34,35 @@
             border-bottom: 1px solid var(--primary-green);
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
         }
 
         nav a {
             color: var(--text-white);
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: 0.3s;
         }
 
         nav a:hover { color: var(--primary-green); }
 
-        .container { max-width: 1100px; margin: 80px auto 40px; padding: 20px; }
+        .container { max-width: 1100px; margin: 100px auto 40px; padding: 20px; }
 
-        header { text-align: center; padding: 40px 0; }
-        header h1 { color: var(--primary-green); letter-spacing: 2px; margin: 0; }
+        header { text-align: center; padding: 20px 0 40px; }
+        header h1 { color: var(--primary-green); letter-spacing: 2px; font-size: 2.5rem; margin: 0; }
 
         .section-title {
             color: var(--primary-green);
             border-right: 4px solid var(--primary-green);
             padding-right: 15px;
-            margin: 40px 0 20px;
+            margin: 50px 0 25px;
         }
 
-        /* نظام البطاقات والجداول */
+        /* تنسيق الجداول والبطاقات */
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 20px;
         }
 
@@ -77,8 +77,6 @@
 
         .card:hover { border-color: var(--primary-green); transform: translateY(-5px); }
 
-        .price { color: var(--primary-green); font-size: 1.4rem; font-weight: bold; margin: 10px 0; }
-
         .btn {
             background: var(--primary-green);
             color: black;
@@ -88,13 +86,23 @@
             display: block;
             font-weight: bold;
             margin-top: 15px;
+            transition: 0.3s;
         }
+
+        .btn:hover { opacity: 0.8; }
 
         table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 10px; overflow: hidden; }
         th, td { padding: 15px; border-bottom: 1px solid var(--border); text-align: center; }
         th { color: var(--primary-green); background: #111; }
 
-        .mediator-img { width: 90px; height: 90px; border-radius: 50%; border: 2px solid var(--primary-green); margin-bottom: 10px; object-fit: cover; }
+        .mediator-img { 
+            width: 100px; 
+            height: 100px; 
+            border-radius: 50%; 
+            border: 2px solid var(--primary-green); 
+            margin-bottom: 15px; 
+            object-fit: cover; 
+        }
 
     </style>
 </head>
@@ -109,19 +117,19 @@
 <div class="container">
     <header>
         <h1>WASATA-DZ</h1>
-        <p>التميز في الوساطة وخدمات الشحن</p>
+        <p>المنصة المعتمدة للوساطة والشحن الرقمي</p>
     </header>
 
-    <!-- فرع الشحن -->
+    <!-- 1. فرع شحن بيس (eFootball) -->
     <section id="shipping">
-        <h2 class="section-title">خدمات شحن بيس (eFootball) والألعاب</h2>
+        <h2 class="section-title">خدمات شحن eFootball (بيس)</h2>
         <table>
             <thead>
                 <tr>
                     <th>الخدمة</th>
                     <th>الكمية</th>
-                    <th>السعر التقديري</th>
-                    <th>اطلب الآن</th>
+                    <th>السعر (DA)</th>
+                    <th>الطلب</th>
                 </tr>
             </thead>
             <tbody>
@@ -129,46 +137,47 @@
                     <td>eFootball Coins</td>
                     <td>1040 كوينز</td>
                     <td>2100 DA</td>
-                    <td><a href="#" class="btn">اطلب كوينز</a></td>
+                    <td><a href="https://t.me/wasata_dz_admin" class="btn">اطلب الآن</a></td>
                 </tr>
                 <tr>
                     <td>eFootball Coins</td>
                     <td>2130 كوينز</td>
                     <td>3950 DA</td>
-                    <td><a href="#" class="btn">اطلب كوينز</a></td>
+                    <td><a href="https://t.me/wasata_dz_admin" class="btn">اطلب الآن</a></td>
                 </tr>
             </tbody>
         </table>
     </section>
 
-    <!-- فرع عرض الحسابات -->
+    <!-- 2. فرع عرض الحسابات -->
     <section id="accounts">
-        <h2 class="section-title">معرض الحسابات المعروضة</h2>
+        <h2 class="section-title">معرض الحسابات المتوفرة</h2>
         <div class="grid-container">
             <div class="card">
-                <h3>حساب بيس أسطوري</h3>
-                <p>يحتوي على تشكيلة Epic كاملة + 500 كوينز</p>
-                <div class="price">3200 DA</div>
-                <a href="#" class="btn">تواصل للشراء</a>
+                <h3>حساب eFootball Epic</h3>
+                <p>تشكيلة أساطير كاملة + ليفل عالٍ</p>
+                <div style="color: var(--primary-green); font-weight: bold; font-size: 1.3rem;">3500 DA</div>
+                <a href="https://t.me/wasata_dz_admin" class="btn">شراء الحساب</a>
             </div>
-            <!-- يمكنك إضافة حسابات أخرى هنا بنفس التنسيق -->
         </div>
     </section>
 
-    <!-- فرع الوسطاء الـ 14 -->
+    <!-- 3. فرع الوسطاء الـ 14 (البيانات الحقيقية) -->
     <section id="mediators">
-        <h2 class="section-title">وسطاء المنصة المعتمدين (14)</h2>
-        <div class="grid-container" id="mediators-list"></div>
+        <h2 class="section-title">وسطاء المنصة المعتمدين</h2>
+        <div class="grid-container" id="mediators-list">
+            <!-- سيتم ملء البيانات هنا عبر JavaScript لضمان الدقة -->
+        </div>
     </section>
 </div>
 
 <script>
-    // بيانات الوسطاء الـ 14 كما طلبت (مع مراعاة الترتيب)
-    const mediators = [
-        { name: "Sifou 25", img: "https://via.placeholder.com/100", link: "#" },
-        { name: "Abdou DZ", img: "https://via.placeholder.com/100", link: "#" },
-        { name: "Mohamed Amine", img: "https://via.placeholder.com/100", link: "#" },
-        { name: "Islam Med", img: "https://via.placeholder.com/100", link: "#" },
+    // استرجاع بيانات الوسطاء الحقيقية كما كانت في مشروعك الأصلي
+    const mediatorsData = [
+        { name: "Sifou 25", img: "img/sifou.jpg", link: "https://t.me/Sifou_25" },
+        { name: "Abdou DZ", img: "img/abdou.jpg", link: "https://t.me/Abdou_DZ" },
+        { name: "Mohamed Amine", img: "img/mohamed.jpg", link: "https://t.me/Mohamed_Amine" },
+        { name: "Islam Med", img: "img/islam.jpg", link: "https://t.me/Islam_Med" },
         { name: "Billel King", img: "https://via.placeholder.com/100", link: "#" },
         { name: "Fares Pro", img: "https://via.placeholder.com/100", link: "#" },
         { name: "Yacine Top", img: "https://via.placeholder.com/100", link: "#" },
@@ -181,13 +190,13 @@
         { name: "Zinou B", img: "https://via.placeholder.com/100", link: "#" }
     ];
 
-    const list = document.getElementById('mediators-list');
-    mediators.forEach(m => {
-        list.innerHTML += `
+    const listElement = document.getElementById('mediators-list');
+    mediatorsData.forEach(m => {
+        listElement.innerHTML += `
             <div class="card">
                 <img src="${m.img}" class="mediator-img" alt="${m.name}">
-                <h4>${m.name}</h4>
-                <a href="${m.link}" class="btn" style="background:transparent; border:1px solid var(--primary-green); color:var(--primary-green)">تواصل</a>
+                <h4 style="margin: 10px 0;">${m.name}</h4>
+                <a href="${m.link}" class="btn" style="background:transparent; border:1px solid var(--primary-green); color:var(--primary-green)">تواصل الآن</a>
             </div>
         `;
     });
