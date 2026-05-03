@@ -3,229 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wasata-DZ | منصة الوساطة والشحن</title>
+    <title>Wasata-DZ | المنصة الرسمية</title>
     <style>
         :root {
             --primary-green: #00ff41;
-            --bg-black: #050505;
-            --card-bg: #111111;
-            --text-white: #eeeeee;
-            --border-color: #222;
+            --bg-black: #080808;
+            --card-bg: #121212;
+            --text-white: #ffffff;
+            --border: #1a1a1a;
         }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
             background-color: var(--bg-black);
             color: var(--text-white);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            padding: 0;
+            line-height: 1.6;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 50px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        h1 { color: var(--primary-green); font-size: 2.5rem; }
-
-        /* قسم عرض الحسابات - Bento Grid Style */
-        .market-section {
-            margin: 40px 0;
-        }
-
-        .section-title {
-            border-right: 4px solid var(--primary-green);
-            padding-right: 15px;
-            margin-bottom: 30px;
-        }
-
-        .accounts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* القائمة العلوية للتنقل */
+        nav {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--primary-green);
+            display: flex;
+            justify-content: center;
             gap: 20px;
         }
 
-        .account-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            overflow: hidden;
+        nav a {
+            color: var(--text-white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
             transition: 0.3s;
         }
 
-        .account-card:hover {
-            border-color: var(--primary-green);
-            transform: translateY(-5px);
-        }
+        nav a:hover { color: var(--primary-green); }
 
-        .account-img {
-            width: 100%;
-            height: 180px;
-            background: #222; /* Placeholder */
-            object-fit: cover;
-        }
+        .container { max-width: 1100px; margin: 80px auto 40px; padding: 20px; }
 
-        .account-details {
-            padding: 20px;
-        }
+        header { text-align: center; padding: 40px 0; }
+        header h1 { color: var(--primary-green); letter-spacing: 2px; margin: 0; }
 
-        .price {
-            font-size: 1.5rem;
+        .section-title {
             color: var(--primary-green);
-            font-weight: bold;
+            border-right: 4px solid var(--primary-green);
+            padding-right: 15px;
+            margin: 40px 0 20px;
         }
 
-        /* قسم الشحن */
-        .shipping-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--card-bg);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .shipping-table th, .shipping-table td {
-            padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .shipping-table th {
-            background: #1a1a1a;
-            color: var(--primary-green);
-        }
-
-        /* قسم الوسطاء (الـ 14 وسيط) */
-        .mediators-grid {
+        /* نظام البطاقات والجداول */
+        .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
         }
 
-        .mediator-item {
+        .card {
             background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
             padding: 20px;
-            border-radius: 10px;
             text-align: center;
-            border: 1px solid var(--border-color);
+            transition: 0.3s;
         }
 
-        .mediator-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 2px solid var(--primary-green);
-            margin-bottom: 10px;
-        }
+        .card:hover { border-color: var(--primary-green); transform: translateY(-5px); }
+
+        .price { color: var(--primary-green); font-size: 1.4rem; font-weight: bold; margin: 10px 0; }
 
         .btn {
-            display: inline-block;
             background: var(--primary-green);
             color: black;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 10px;
+            border-radius: 6px;
             text-decoration: none;
+            display: block;
             font-weight: bold;
-            margin-top: 10px;
-            cursor: pointer;
-            border: none;
+            margin-top: 15px;
         }
 
-        .btn-outline {
-            background: transparent;
-            border: 1px solid var(--primary-green);
-            color: var(--primary-green);
-        }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 10px; overflow: hidden; }
+        th, td { padding: 15px; border-bottom: 1px solid var(--border); text-align: center; }
+        th { color: var(--primary-green); background: #111; }
+
+        .mediator-img { width: 90px; height: 90px; border-radius: 50%; border: 2px solid var(--primary-green); margin-bottom: 10px; object-fit: cover; }
+
     </style>
 </head>
 <body>
 
+<nav>
+    <a href="#shipping">قسم الشحن</a>
+    <a href="#accounts">عرض الحسابات</a>
+    <a href="#mediators">الوسطاء الـ 14</a>
+</nav>
+
 <div class="container">
     <header>
         <h1>WASATA-DZ</h1>
-        <p>المنصة الأولى لخدمات الوساطة الرقمية والشحن</p>
+        <p>التميز في الوساطة وخدمات الشحن</p>
     </header>
 
-    <!-- 1. فرع عرض الحسابات -->
-    <section class="market-section">
-        <h2 class="section-title">معرض الحسابات المتاحة</h2>
-        <div class="accounts-grid">
-            <!-- مثال لحساب معروض -->
-            <div class="account-card">
-                <div class="account-img" style="display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: #555;">[ صورة الحساب ]</div>
-                <div class="account-details">
-                    <h3>حساب مستوى 75</h3>
-                    <p>المواصفات: سكنات نادرة + رقصات موسمية.</p>
-                    <div class="price">4,500 DA</div>
-                    <a href="#" class="btn">تواصل مع الوسيط المسؤول</a>
-                </div>
-            </div>
-            <!-- كرر البطاقة لأي حسابات إضافية -->
-        </div>
-    </section>
-
-    <!-- 2. فرع شحن الرصيد والخدمات -->
-    <section class="market-section">
-        <h2 class="section-title">خدمات الشحن المباشر</h2>
-        <table class="shipping-table">
+    <!-- فرع الشحن -->
+    <section id="shipping">
+        <h2 class="section-title">خدمات شحن بيس (eFootball) والألعاب</h2>
+        <table>
             <thead>
                 <tr>
                     <th>الخدمة</th>
                     <th>الكمية</th>
-                    <th>السعر (DA)</th>
-                    <th>الطلب</th>
+                    <th>السعر التقديري</th>
+                    <th>اطلب الآن</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>شدات PUBG</td>
-                    <td>325 شدة</td>
-                    <td>1,200</td>
-                    <td><a href="#" class="btn">طلب شحن</a></td>
+                    <td>eFootball Coins</td>
+                    <td>1040 كوينز</td>
+                    <td>2100 DA</td>
+                    <td><a href="#" class="btn">اطلب كوينز</a></td>
                 </tr>
                 <tr>
-                    <td>جواهر Free Fire</td>
-                    <td>530 جوهرة</td>
-                    <td>1,050</td>
-                    <td><a href="#" class="btn">طلب شحن</a></td>
+                    <td>eFootball Coins</td>
+                    <td>2130 كوينز</td>
+                    <td>3950 DA</td>
+                    <td><a href="#" class="btn">اطلب كوينز</a></td>
                 </tr>
             </tbody>
         </table>
     </section>
 
-    <!-- 3. فرع الوسطاء (الـ 14 وسيط المعتمدين) -->
-    <section class="market-section">
-        <h2 class="section-title">وسطاء المنصة المعتمدين (14)</h2>
-        <div class="mediators-grid" id="mediators-container">
-            <!-- سيتم الحفاظ على الترتيب والأسماء هنا كما هي في ملفك الأصلي -->
-            <!-- سأضع هنا بنية فارغة لتقوم بوضع بيانات الـ 14 وسيط داخلها لضمان عدم المساس بمعلوماتهم -->
+    <!-- فرع عرض الحسابات -->
+    <section id="accounts">
+        <h2 class="section-title">معرض الحسابات المعروضة</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>حساب بيس أسطوري</h3>
+                <p>يحتوي على تشكيلة Epic كاملة + 500 كوينز</p>
+                <div class="price">3200 DA</div>
+                <a href="#" class="btn">تواصل للشراء</a>
+            </div>
+            <!-- يمكنك إضافة حسابات أخرى هنا بنفس التنسيق -->
         </div>
+    </section>
+
+    <!-- فرع الوسطاء الـ 14 -->
+    <section id="mediators">
+        <h2 class="section-title">وسطاء المنصة المعتمدين (14)</h2>
+        <div class="grid-container" id="mediators-list"></div>
     </section>
 </div>
 
 <script>
-    // مصفوفة الوسطاء (ضع بيانات الـ 14 وسيط هنا بنفس الترتيب)
+    // بيانات الوسطاء الـ 14 كما طلبت (مع مراعاة الترتيب)
     const mediators = [
-        { name: "الوسيط 1", img: "p1.jpg", link: "t.me/user1" },
-        // ... استكمل الـ 14 وسيط هنا بالترتيب
+        { name: "Sifou 25", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Abdou DZ", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Mohamed Amine", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Islam Med", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Billel King", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Fares Pro", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Yacine Top", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Hamza DZ", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Oussama Med", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Walid Box", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Ayoub Vip", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Tarek G", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Riad Star", img: "https://via.placeholder.com/100", link: "#" },
+        { name: "Zinou B", img: "https://via.placeholder.com/100", link: "#" }
     ];
 
-    const container = document.getElementById('mediators-container');
-    
-    // تأكد من وضع بياناتك في المصفوفة أعلاه وسيقوم هذا الكود بعرضهم تلقائياً
-    mediators.forEach(med => {
-        container.innerHTML += `
-            <div class="mediator-item">
-                <img src="${med.img}" class="mediator-img" alt="${med.name}">
-                <h4>${med.name}</h4>
-                <a href="${med.link}" class="btn btn-outline">تواصل</a>
+    const list = document.getElementById('mediators-list');
+    mediators.forEach(m => {
+        list.innerHTML += `
+            <div class="card">
+                <img src="${m.img}" class="mediator-img" alt="${m.name}">
+                <h4>${m.name}</h4>
+                <a href="${m.link}" class="btn" style="background:transparent; border:1px solid var(--primary-green); color:var(--primary-green)">تواصل</a>
             </div>
         `;
     });
