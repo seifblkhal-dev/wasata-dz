@@ -2,65 +2,157 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>WASATA-DZ | المنصة الرسمية</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wasata-dz | قائمة الوسطاء المعتمدين</title>
     <style>
-        body { background-color: #050505; color: white; font-family: Arial, sans-serif; margin: 0; text-align: center; }
-        .header-line { background-color: #00ff41; height: 2px; width: 100%; }
-        nav { background-color: #000; padding: 15px; border-bottom: 1px solid #1a1a1a; display: flex; justify-content: center; gap: 20px; }
-        nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
-        .main-title { color: #00ff41; font-size: 45px; margin-top: 30px; }
-        
-        /* الأقسام الجديدة */
-        .section-container { width: 90%; max-width: 1000px; margin: 20px auto; background-color: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 8px; padding: 20px; text-align: right; }
-        .section-head { color: #00ff41; border-right: 3px solid #00ff41; padding-right: 10px; margin-bottom: 20px; }
-        table { width: 100%; border-collapse: collapse; text-align: center; }
-        th { color: #00ff41; padding: 10px; border-bottom: 1px solid #1a1a1a; }
-        td { padding: 15px; border-bottom: 1px solid #1a1a1a; }
-        .btn-order { background-color: #00ff41; color: black; padding: 8px 20px; border-radius: 4px; text-decoration: none; font-weight: bold; }
+        :root {
+            --primary-green: #00ff00;
+            --dark-bg: #0a0a0a;
+            --card-bg: #161616;
+            --text-white: #ffffff;
+        }
 
-        /* شبكة الوسطاء الأصلية */
-        .mediators-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; width: 90%; margin: 40px auto; }
-        .med-card { background-color: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 8px; padding: 20px; }
-        .med-img-box { width: 90px; height: 40px; border: 1px solid #00ff41; border-radius: 20px; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .contact-btn { display: block; border: 1px solid #00ff41; color: #00ff41; padding: 8px; text-decoration: none; border-radius: 4px; margin-top: 15px; }
-        @media (max-width: 850px) { .mediators-grid { grid-template-columns: repeat(2, 1fr); } }
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-white);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--primary-green);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            color: var(--primary-green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Bento Grid Layout */
+        .bento-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .mediator-card {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mediator-card:hover {
+            border-color: var(--primary-green);
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+        }
+
+        .mediator-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #222;
+        }
+
+        .mediator-name {
+            font-size: 1.4rem;
+            color: var(--primary-green);
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .mediator-role {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .fb-link {
+            display: inline-block;
+            background: var(--primary-green);
+            color: #000;
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .fb-link:hover {
+            background: #fff;
+            box-shadow: 0 0 10px var(--primary-green);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #555;
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
-    <div class="header-line"></div>
-    <nav>
-        <a href="#shipping">قسم الشحن</a>
-        <a href="#accounts">عرض الحسابات</a>
-        <a href="#mediators">الوسطاء</a>
-    </nav>
 
-    <h1 class="main-title">WASATA-DZ</h1>
-    
-    <!-- فرع الشحن -->
-    <div id="shipping" class="section-container">
-        <h2 class="section-head">شحن eFootball (بيس)</h2>
-        <table>
-            <tr><th>الكمية</th><th>السعر</th><th>الطلب</th></tr>
-            <tr><td>1040 كوينز</td><td>2100 DA</td><td><a href="#" class="btn-order">اطلب</a></td></tr>
-        </table>
+    <header>
+        <h1>WASATA-DZ PLATFORM</h1>
+        <p>المنصة الموثوقة لوسطاء البيع والشراء</p>
+    </header>
+
+    <div class="bento-container">
+        
+        <!-- الوسيط 1 -->
+        <div class="mediator-card">
+            <img src="682434788_1292941326314113_6149430041564653157_n.jpg" alt="Benbadra Ahmed">
+            <div class="mediator-name">Benbadra Ahmed</div>
+            <div class="mediator-role">متخصص شحن كوينز ووساطة eFootball</div>
+            <a href="#" class="fb-link">Facebook Profile</a>
+        </div>
+
+        <!-- الوسيط 2 -->
+        <div class="mediator-card">
+            <img src="686093056_1678173696524194_2233143532774049149_n.jpg" alt="Wail Ben Gochei">
+            <div class="mediator-name">Wail Ben Gochei</div>
+            <div class="mediator-role">وسيط معتمد - خدمات رقمية</div>
+            <a href="#" class="fb-link">Facebook Profile</a>
+        </div>
+
+        <!-- الوسيط 3 -->
+        <div class="mediator-card">
+            <img src="686509516_122161472120640020_7698140914024962050_n.jpg" alt="Ahmed Berk">
+            <div class="mediator-name">Ahmed Berk</div>
+            <div class="mediator-role">وسيط حسابات وألعاب</div>
+            <a href="#" class="fb-link">Facebook Profile</a>
+        </div>
+
+        <!-- الوسيط 4 -->
+        <div class="mediator-card">
+            <img src="d734f4ca-9687-4b93-940a-baf20d4f5061.jpg" alt="Seif Din Blkhal">
+            <div class="mediator-name">Seif Din Blkhal</div>
+            <div class="mediator-role">وسيط صفقات تجارية</div>
+            <a href="#" class="fb-link">Facebook Profile</a>
+        </div>
+
+        <!-- يمكنك تكرار الكارد أعلاه لبقية الـ 14 وسيطاً -->
+
     </div>
 
-    <!-- الوسطاء بالأسماء الصحيحة -->
-    <h2 id="mediators" style="color: #00ff41;">الوسطاء المعتمدون</h2>
-    <div class="mediators-grid">
-        <script>
-            // الأسماء الحقيقية التي ذكرتها
-            const realNames = ["سيف", "عبد الله", "فهد", "حمزة", "ياسين", "فارس", "بلال", "طارق", "أيوب", "وليد", "أسامة", "زينو", "رياض", "إسلام"];
-            realNames.forEach(name => {
-                document.write(`
-                    <div class="med-card">
-                        <div class="med-img-box"><span style="color:#00ff41; font-size:10px;">LOGO</span></div>
-                        <div style="font-weight:bold">${name}</div>
-                        <a href="#" class="contact-btn">تواصل</a>
-                    </div>
-                `);
-            });
-        </script>
-    </div>
+    <footer>
+        <p>تم التطوير بواسطة نظام الذكاء الاصطناعي لمشروع Wasata-dz 2026</p>
+    </footer>
+
 </body>
 </html>
