@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wasata-DZ | المنصة الرسمية</title>
     <style>
-        /* التنسيق القديم كما هو تماماً */
         body {
             background-color: #050505;
             color: white;
@@ -15,32 +14,16 @@
             text-align: center;
         }
 
-        .header-line {
-            background-color: #00ff41;
-            height: 2px;
-            width: 100%;
-            margin-bottom: 20px;
-        }
+        .header-line { background-color: #00ff41; height: 2px; width: 100%; }
 
-        nav {
-            margin-bottom: 30px;
-            padding: 10px;
-        }
+        nav { padding: 20px; background: #000; border-bottom: 1px solid #1a1a1a; margin-bottom: 30px; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 14px; }
+        nav a:hover { color: #00ff41; }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+        .main-title { color: #00ff41; font-size: 40px; margin: 20px 0 5px; }
+        .sub-title { color: #eee; font-size: 16px; margin-bottom: 40px; }
 
-        .main-title {
-            color: #00ff41;
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-
-        /* تنسيق قسم الشحن والحسابات الجديد بنفس الستايل */
+        /* أقسام الشحن والحسابات */
         .section-box {
             background-color: #0d0d0d;
             border: 1px solid #1a1a1a;
@@ -49,40 +32,38 @@
             width: 90%;
             max-width: 1000px;
             padding: 20px;
+            text-align: right;
         }
 
         .section-head {
             color: #00ff41;
-            text-align: right;
             border-right: 3px solid #00ff41;
             padding-right: 10px;
             margin-bottom: 20px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
+        table { width: 100%; border-collapse: collapse; text-align: center; }
         th { color: #00ff41; padding: 15px; border-bottom: 1px solid #1a1a1a; }
         td { padding: 15px; border-bottom: 1px solid #1a1a1a; }
 
         .order-btn {
             background-color: #00ff41;
             color: black;
-            padding: 10px 25px;
+            padding: 8px 20px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
         }
 
-        /* شبكة الوسطاء (الـ 14 وسيط) كما في الصورة image_0a6cfe.png */
+        /* شبكة الوسطاء الـ 14 كما في الصورة تماماً */
+        .mediators-title { color: #00ff41; margin-top: 50px; font-size: 24px; }
+        
         .mediators-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             width: 90%;
-            margin: 40px auto;
+            margin: 30px auto;
         }
 
         .med-card {
@@ -90,33 +71,38 @@
             border-radius: 10px;
             padding: 20px;
             border: 1px solid #1a1a1a;
+            transition: 0.3s;
         }
 
-        .med-img-box {
-            width: 80px;
+        .med-card:hover { border-color: #00ff41; }
+
+        /* دائرة الصورة كما في image_0a6cfe.png */
+        .med-img-frame {
+            width: 100px;
             height: 40px;
             border: 1px solid #00ff41;
-            border-radius: 20px;
-            margin: 0 auto 10px;
+            border-radius: 50px;
+            margin: 0 auto 15px;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
         }
 
-        .contact-btn {
+        .med-img-frame img { width: 100%; height: auto; }
+
+        .contact-link {
             display: block;
             border: 1px solid #00ff41;
             color: #00ff41;
             padding: 8px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-size: 14px;
         }
 
-        @media (max-width: 768px) {
-            .mediators-grid { grid-template-columns: repeat(2, 1fr); }
-        }
+        @media (max-width: 900px) { .mediators-grid { grid-template-columns: repeat(2, 1fr); } }
     </style>
 </head>
 <body>
@@ -130,9 +116,9 @@
 </nav>
 
 <h1 class="main-title">WASATA-DZ</h1>
-<p>المنصة المعتمدة للوساطة والشحن الرقمي</p>
+<p class="sub-title">المنصة المعتمدة للوساطة والشحن الرقمي</p>
 
-<!-- فرع الشحن الجديد -->
+<!-- قسم الشحن -->
 <div id="shipping" class="section-box">
     <h2 class="section-head">خدمات شحن eFootball (بيس)</h2>
     <table>
@@ -140,7 +126,7 @@
             <tr>
                 <th>الخدمة</th>
                 <th>الكمية</th>
-                <th>السعر (DA)</th>
+                <th>السعر</th>
                 <th>الطلب</th>
             </tr>
         </thead>
@@ -148,49 +134,60 @@
             <tr>
                 <td>eFootball Coins</td>
                 <td>1040 كوينز</td>
-                <td>DA 2100</td>
+                <td>2100 DA</td>
                 <td><a href="#" class="order-btn">اطلب الآن</a></td>
             </tr>
             <tr>
                 <td>eFootball Coins</td>
                 <td>2130 كوينز</td>
-                <td>DA 3950</td>
+                <td>3950 DA</td>
                 <td><a href="#" class="order-btn">اطلب الآن</a></td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<!-- فرع عرض الحسابات -->
+<!-- قسم الحسابات -->
 <div id="accounts" class="section-box">
     <h2 class="section-head">معرض الحسابات المتوفرة</h2>
-    <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
-        <p>حساب eFootball ليفل عالٍ + أساطير</p>
-        <span style="color: #00ff41; font-weight: bold;">DA 3500</span>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p>حساب بيس (Epic تشكيلة كاملة)</p>
+        <span style="color: #00ff41; font-weight: bold;">3200 DA</span>
         <a href="#" class="order-btn">تواصل للشراء</a>
     </div>
 </div>
 
-<!-- قسم الوسطاء الـ 14 (التصميم القديم تماماً) -->
-<h2 id="mediators" style="color: #00ff41; margin-top: 50px;">الوسطاء الـ 14</h2>
+<!-- الوسطاء الـ 14 بالأسماء والترتيب الصحيح -->
+<h2 id="mediators" class="mediators-title">الوسطاء الـ 14</h2>
 <div class="mediators-grid">
-    <!-- هؤلاء هم الوسطاء الـ 14 بنفس ترتيب صورتك image_0a6cfe.png -->
     <script>
-        const names = [
-            "Sifou 25", "Abdou DZ", "Mohamed Amine", "Islam Med",
-            "Billel King", "Fares Pro", "Yacine Top", "Hamza DZ",
-            "Qussama Med", "Walid Box", "Ayoub Vip", "Tarek G",
-            "Riad Star", "Zinou B"
+        // الأسماء مأخوذة بدقة من الصورة image_0a6cfe.png
+        const mediators = [
+            { name: "Islam Med", img: "img/islam.jpg" },
+            { name: "Mohamed Amine", img: "img/mohamed.jpg" },
+            { name: "Abdou DZ", img: "img/abdou.jpg" },
+            { name: "Sifou 25", img: "img/sifou.jpg" },
+            { name: "Hamza DZ", img: "img/hamza.jpg" },
+            { name: "Yacine Top", img: "img/yacine.jpg" },
+            { name: "Fares Pro", img: "img/fares.jpg" },
+            { name: "Billel King", img: "img/billel.jpg" },
+            { name: "Tarek G", img: "img/tarek.jpg" },
+            { name: "Ayoub Vip", img: "img/ayoub.jpg" },
+            { name: "Walid Box", img: "img/walid.jpg" },
+            { name: "Qussama Med", img: "img/qussama.jpg" },
+            { name: "Zinou B", img: "img/zinou.jpg" },
+            { name: "Riad Star", img: "img/riad.jpg" }
         ];
 
-        names.forEach(name => {
+        mediators.forEach(m => {
             document.write(`
                 <div class="med-card">
-                    <div class="med-img-box">
-                        <span style="font-size:10px; color:#00ff41">${name}</span>
+                    <div class="med-img-frame">
+                        <img src="${m.img}" alt="${m.name}" onerror="this.style.display='none'">
+                        <span style="font-size:10px; color:#00ff41">${m.name}</span>
                     </div>
-                    <div style="font-weight:bold">${name}</div>
-                    <a href="#" class="contact-btn">تواصل</a>
+                    <div style="font-weight:bold; font-size:15px;">${m.name}</div>
+                    <a href="#" class="contact-link">تواصل</a>
                 </div>
             `);
         });
